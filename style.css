@@ -9,3 +9,61 @@ body {
 a {
     color: #4da3ff;
 }
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+header a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+section {
+    padding: 64px 0;
+}
+
+
+#hero{
+    padding: 96px 0;
+}
+
+#hero h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    line-height: 1.1;
+}
+
+#hero p {
+    max-width: 32rem;
+    font-size: 1.25rem;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 999px;
+    background: #4da3ff;
+    color: #111111;
+    font-weight: 600;
+    text-decoration: none;
+}
