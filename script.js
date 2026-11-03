@@ -133,6 +133,32 @@ function setUpCentredLinks() {
     }
 }
 
+function setUpThemeToggle() {
+	const toggle = document.querySelector(".theme-toggle");
+
+	function showCurrentTheme() {
+		const isLight = document.documentElement.dataset.theme === "light";
+		toggle.textContent = isLight ? "☾" : "☀";
+		toggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+	}
+
+	toggle.addEventListener("click", () => {
+		const isLight = document.documentElement.dataset.theme === "light";
+		const newTheme = isLight ? "dark" : "light";
+
+		document.documentElement.dataset.theme = newTheme;
+		showCurrentTheme();
+
+		try {
+			localStorage.setItem("theme", newTheme);
+		} catch (error) {}
+	});
+
+	showCurrentTheme();
+}
+
+setUpThemeToggle();
+
 setUpSideIndex();
 
 setUpCentredLinks();

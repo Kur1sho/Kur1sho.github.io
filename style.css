@@ -241,6 +241,33 @@ section h2 {
 	background: transparent;
 }
 
+.education {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	margin-top: 40px;
+}
+
+.education img {
+	width: 64px;
+	height: 64px;
+	object-fit: contain;
+}
+
+.education h3 {
+	margin: 0;
+	font-size: 1.5rem;
+	line-height: 1.2;
+}
+
+#about .education p {
+	margin: 0;
+	color: #c8c8c8;
+	text-align: left;
+}
+
 /* Projects */
 .project-grid {
 	display: grid;
@@ -435,4 +462,72 @@ footer {
 	.fake-cursor {
 		transition: none;
 	}
+}
+
+/* Theme toggle */
+.theme-toggle {
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	border: 1px solid #a67cff;
+	border-radius: 50%;
+	background: transparent;
+	color: inherit;
+	font-size: 1.1rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+/* Light mode */
+html[data-theme="light"] body {
+	background:
+		radial-gradient(circle at 10% 5%, rgba(124, 77, 255, 0.12), transparent 35%),
+		radial-gradient(circle at 90% 15%, rgba(166, 124, 255, 0.1), transparent 35%),
+		#f4f4f6;
+	background-attachment: fixed;
+	color: #1c1c1f;
+}
+
+html[data-theme="light"] a {
+	color: #5b2fd6;
+}
+
+html[data-theme="light"] header a,
+html[data-theme="light"] #contact .icon-link {
+	color: #1c1c1f;
+}
+
+html[data-theme="light"] .button {
+	color: #111111;
+}
+
+html[data-theme="light"] .project-card,
+html[data-theme="light"] .project-card a {
+	color: #ffffff;
+}
+
+html[data-theme="light"] .ribbon {
+	background: linear-gradient(90deg, #ece4ff, #dccbff);
+}
+
+html[data-theme="light"] #about .education p {
+	color: #4a4a50;
+}
+
+html[data-theme="light"] footer {
+	color: #5a5a60;
+}
+
+html[data-theme="light"] .side-index {
+	border-left-color: #cccccc;
+}
+
+html[data-theme="light"] .side-index a {
+	color: #5a5a60;
+}
+
+html[data-theme="light"] .side-index a:hover,
+html[data-theme="light"] .side-index a.active {
+	border-left-color: #5b2fd6;
+	color: #111111;
 }

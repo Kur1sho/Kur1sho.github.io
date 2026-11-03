@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        try {
+            if (localStorage.getItem("theme") === "light") {
+                document.documentElement.dataset.theme = "light";
+            }
+        } catch (error) {}
+    </script>
+    <link rel="icon" href="favicon.png">
     <title>Ben Adam Whiting</title>
     <meta name="description" content="Ben Adam Whiting is a final-year Computer Science student at the University of Lincoln, focused on AI security and looking for graduate software engineering roles.">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,9 +22,9 @@
         <a href="#hero">Ben Adam Whiting</a>
 
         <nav>
+            <button class="theme-toggle" type="button"></button>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
             <a class="button nav-button" href="#contact">Get in Touch</a>
         </nav>
     </header>
@@ -69,6 +77,16 @@
                 Hi, I'm Ben. I study Computer Science at the University of Lincoln, graduating in 2027.  Meanwhile, I am working on my dissertation, building AI-powered smart glasses that explain difficult concepts to students in real time during lectures.
                 After graduating, I'm looking for a software engineering job in the UK, US, or Japan, ideally on a team building AI products or the cloud systems behind them, where I can help find and fix security problems before attackers can exploit them.
             </p>
+            <p>
+                I'm open to relocating and I'm currently learning Japanese.
+            </p>
+            <div class="education">
+                <img src="lincoln_logo.png" alt="">
+                <div>
+                    <h3>University of Lincoln</h3>
+                    <p>BSc Computer Science · Expected 2027</p>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
@@ -135,6 +153,7 @@
 
     <footer>
         <p>© 2026 Ben Adam Whiting</p>
+        <p>Built by hand with HTML, CSS and JavaScript. <a href="https://github.com/Kur1sho/Kur1sho.github.io">View the code</a></p>
     </footer>
 </body>
 </html>
