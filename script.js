@@ -85,9 +85,12 @@ function setUpCardReveal() {
 function setUpSideIndex() {
     const sideIndex = document.querySelector(".side-index");
     const topBar = document.querySelector("header");
+    const floatingToggle = document.querySelector(".floating-toggle");
 
     const topBarObserver = new IntersectionObserver((entries) => {
-        sideIndex.classList.toggle("visible", !entries[0].isIntersecting);
+        const topBarGone = !entries[0].isIntersecting;
+        sideIndex.classList.toggle("visible", topBarGone);
+        floatingToggle.classList.toggle("visible", topBarGone);
     });
 
     topBarObserver.observe(topBar);
@@ -133,16 +136,19 @@ function setUpCentredLinks() {
     }
 }
 
-function setUpThemeToggle() {
-	const toggle = document.querySelector(".theme-toggle");
+function setUpThemeToggles() {
+	const toggles = document.querySelectorAll(".theme-toggle");
 
 	function showCurrentTheme() {
 		const isLight = document.documentElement.dataset.theme === "light";
-		toggle.textContent = isLight ? "☾" : "☀";
-		toggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+
+		for (const toggle of toggles) {
+			toggle.textContent = isLight ? "☾" : "☀";
+			toggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+		}
 	}
 
-	toggle.addEventListener("click", () => {
+	function switchTheme() {
 		const isLight = document.documentElement.dataset.theme === "light";
 		const newTheme = isLight ? "dark" : "light";
 
@@ -152,12 +158,16 @@ function setUpThemeToggle() {
 		try {
 			localStorage.setItem("theme", newTheme);
 		} catch (error) {}
-	});
+	}
+
+	for (const toggle of toggles) {
+		toggle.addEventListener("click", switchTheme);
+	}
 
 	showCurrentTheme();
 }
 
-setUpThemeToggle();
+setUpThemeToggles();
 
 setUpSideIndex();
 
