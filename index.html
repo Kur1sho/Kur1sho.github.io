@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ben Adam Whiting</title>
     <meta name="description" content="Ben Adam Whiting is a final-year Computer Science student at the University of Lincoln, focused on AI security and looking for graduate software engineering roles.">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,13 +17,20 @@
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
+            <a class="button nav-button" href="#contact">Get in Touch</a>
         </nav>
     </header>
+
+    <nav class="side-index" aria-label="Page sections">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
     <main>
         <section id="hero">
             <div>
-                <h1>Ben Adam Whiting</h1>
+                <h1><span class="typed">Hi, I'm </span><span class="highlight"><span class="typed">Ben</span><span class="fake-cursor" aria-hidden="true">Ben</span></span><br><span class="typed">Adam Whiting</span></h1>
                 <p>Final-year Computer Science student focused on AI security.</p>
                 <div class="hero-buttons">
                     <a class="button" href="https://github.com/Kur1sho/">GitHub</a>
@@ -29,18 +38,33 @@
                 </div>
             </div>
 
-            <pre class="ascii" aria-hidden="true">
-██████╗ ███████╗███╗   ██╗
-██╔══██╗██╔════╝████╗  ██║
-██████╔╝█████╗  ██╔██╗ ██║
-██╔══██╗██╔══╝  ██║╚██╗██║
-██████╔╝███████╗██║ ╚████║
-╚═════╝ ╚══════╝╚═╝  ╚═══╝              
-            </pre>
+            <div class="hero-photo">
+                <img src="photo.jpg" alt="Ben Adam Whiting">
+                <span class="badge badge-one">AI security</span>
+                <span class="badge badge-two">Graduating 2027</span>
+            </div>
         </section>
 
+        <div class="ribbon">
+            <div class="ribbon-track">
+                <ul>
+                <li>Python</li>
+                <li>TypeScript</li>
+                <li>Go</li>
+                <li>React</li>
+                <li>FastAPI</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+                <li>Terraform</li>
+                <li>AWS</li>
+                <li>GitHub Actions</li>
+                </ul>
+            </div>
+        </div>
+
+
         <section id="about">
-            <h2>About</h2>
+            <h2><span class="typed">Get to know </span><span class="highlight"><span class="typed">me</span><span class="fake-cursor" aria-hidden="true">Ben</span></span></h2>
             <p>
                 Hi, I'm Ben. I study Computer Science at the University of Lincoln, graduating in 2027.  Meanwhile, I am working on my dissertation, building AI-powered smart glasses that explain difficult concepts to students in real time during lectures.
                 After graduating, I'm looking for a software engineering job in the UK, US, or Japan, ideally on a team building AI products or the cloud systems behind them, where I can help find and fix security problems before attackers can exploit them.
@@ -48,7 +72,7 @@
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2><span class="typed">Some of the </span><span class="highlight"><span class="typed">projects</span><span class="fake-cursor" aria-hidden="true">Ben</span></span><span class="typed"> I've built</span></h2>
             
             <div class="project-grid">
                 <article class="project-card">
@@ -66,7 +90,7 @@
                         <li>React Native</li>
                         <li>TypeScript</li>
                         <li>Cloud Hosting</li>
-                        <li>Web Sockets</li>
+                        <li>WebSockets</li>
                         <li>Expo</li>
                         <li>ESP32</li>
                         <li>XREAL One</li>
@@ -74,7 +98,7 @@
                 </article>
                 <article class="project-card">
                     <p class="status">Completed</p>
-                    <h3>A Task Manager Skeleton</h3>
+                    <h3>A Task Manager Built Like a Real Product</h3>
                     <p>Sign up, log in, and see only your own tasks. Behind that simple app, a Python service handles accounts and a Go service handles tasks. Both run in containers on AWS, with the infrastructure defined in Terraform and every change checked by an automated CI pipeline.</p>
                     <ul class="tools">
                         <li>Go</li>
@@ -84,28 +108,33 @@
                         <li>Docker</li>
                         <li>Terraform</li>
                         <li>AWS</li>
-                        <li>GitHub actions</li>
+                        <li>GitHub Actions</li>
                     </ul>
-                    <p><a href="https://github.com/Kur1sho/taskboard-cloud">View Taskboard Cloud on GitHub</a></p>
+                    <p>
+                        <a class="icon-link" href="https://github.com/Kur1sho/taskboard-cloud">
+                            <img src="github_logo.png" alt="">
+                            See on GitHub!
+                        </a>
+                    </p>
                 </article>
             </div>
         </section>
 
-        <section id ="Contact">
+        <section id ="contact">
             <h2>Contact</h2>
             <p>I'm looking for graduate software engineering roles starting in 2027. The best way to reach me is by email.</p>
 
             <ul class="contact-links">
-                <li><a href="mailto:benadamwhiting@outlook.com">Email</a></li>
-                <li><a href="https://github.com/Kur1sho">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/ben-whiting-90b14a216/">LinkedIn</a></li>
+                <li><a class="icon-link" href="mailto:benadamwhiting@outlook.com"><img src="email_logo.png" alt="">Email</a></li>
+                <li><a class="icon-link" href="https://github.com/Kur1sho"><img src="github_logo.png" alt="">GitHub</a></li>
+                <li><a class="icon-link" href="https://www.linkedin.com/in/ben-whiting-90b14a216/"><img src=linkedin_logo.png alt="">LinkedIn</a></li>
             </ul>
         </section>
 
     </main>
 
     <footer>
-        <p>@ 2026 Ben Adam Whiting</p>
+        <p>© 2026 Ben Adam Whiting</p>
     </footer>
 </body>
 </html>
